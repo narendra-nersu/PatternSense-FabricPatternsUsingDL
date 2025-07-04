@@ -1,0 +1,79 @@
+<!-- about.html -->
+{% include 'base.html' %}
+
+<style>
+  .about-section {
+    background-color: white;
+    padding: 40px 20px 20px;
+    color: #333;
+  }
+
+  .about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .about-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 30px;
+  }
+
+  .about-item {
+    text-align: center;
+  }
+
+  .about-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+</style>
+
+<div class="about-section">
+  <h2>About PatternSense</h2>
+  <p>
+    PatternSense is an intelligent deep learning application designed to classify fabric patterns efficiently.
+    Our system uses powerful CNN and ResNet50 models trained on a diverse set of fabric styles to recognize
+    patterns such as Floral, Checked, Dotted, and more.
+  </p>
+
+  <div class="about-gallery">
+    <div class="about-item">
+      <img src="{{ url_for('static', filename='images/floral.png') }}" alt="Floral Fabric">
+      <span>Floral</span>
+    </div>
+    <div class="about-item">
+      <img src="{{ url_for('static', filename='images/checked.png') }}" alt="Checked Fabric">
+      <span>Checked</span>
+    </div>
+    <div class="about-item">
+      <img src="{{ url_for('static', filename='images/dotted.png') }}" alt="Dotted Fabric">
+      <span>Dotted</span>
+    </div>
+    <div class="about-item">
+      <img src="{{ url_for('static', filename='images/plain.png') }}" alt="Plain Fabric">
+      <span>Plain</span>
+    </div>
+  </div>
+</div>

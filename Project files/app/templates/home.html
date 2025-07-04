@@ -1,0 +1,98 @@
+<!-- home.html -->
+{% include 'base.html' %}
+
+<style>
+  .hero-section {
+    background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .features-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 60px 20px;
+    border-radius: 10px;
+  }
+
+  .features-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .features-section .card {
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .features-section .card:hover {
+    transform: scale(1.05);
+  }
+
+  .btn-primary {
+    background-color: #2c3e50;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #1a252f;
+  }
+</style>
+
+<div class="hero-section">
+  <h1>Welcome to PatternSense</h1>
+  <p>AI meets fabric — fast, accurate, and intelligent pattern detection.</p>
+</div>
+
+<div class="container my-5 features-section">
+  <h2>What You Can Do</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Upload Fabric</h5>
+          <p class="card-text">Easily upload fabric images in just a few clicks.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">AI-Powered Prediction</h5>
+          <p class="card-text">Model processes the image using advanced CNN and ResNet50.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Pattern Output</h5>
+          <p class="card-text">Receive real-time results of fabric patterns like Floral, Checked, and more.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mb-5">
+  <a href="{{ url_for('getstarted') }}" class="btn btn-primary btn-lg">Get Started</a>
+</div>

@@ -1,0 +1,46 @@
+<!-- upload.html -->
+{% include 'base.html' %}
+
+<style>
+  .upload-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .upload-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .upload-section p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .upload-section form {
+    margin-top: 30px;
+  }
+
+  .upload-section input[type="file"] {
+    margin-bottom: 20px;
+  }
+
+  .upload-section .btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+  }
+</style>
+
+<div class="upload-section">
+  <h2>Upload Your Fabric Image</h2>
+  <p>Select an image of the fabric pattern and click "Predict" to get the classification.</p>
+  <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <br><br>
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+</div>

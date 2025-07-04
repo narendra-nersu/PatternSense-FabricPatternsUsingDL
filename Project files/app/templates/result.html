@@ -1,0 +1,40 @@
+<!-- result.html -->
+{% include 'base.html' %}
+
+<style>
+  .result-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .result-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .result-section p {
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .result-section img {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .btn-container {
+    margin-top: 30px;
+  }
+</style>
+
+<div class="result-section">
+  <h2>Prediction Result</h2>
+  <p>The predicted fabric pattern is: <strong>{{ prediction }}</strong></p>
+  <img src="{{ url_for('static', filename='uploads/' + img_url) }}" alt="Uploaded Image">
+  <div class="btn-container">
+    <a href="{{ url_for('upload') }}" class="btn btn-primary">Try with another image!</a>
+  </div>
+</div>

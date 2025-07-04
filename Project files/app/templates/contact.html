@@ -1,0 +1,81 @@
+{% include 'base.html' %}
+
+<style>
+  .contact-section {
+    padding: 60px 20px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .contact-form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contact-form h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .form-label {
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  .map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 500px;
+    width: 100%;
+    height: 350px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<div class="contact-section">
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-light">Send</button>
+    </form>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0880200965283!2d78.48601291418495!3d17.385044888071846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9778b40d7e27%3A0xb4f0f9469dd3b4cf!2sCharminar!5e0!3m2!1sen!2sin!4v1682168941459!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
